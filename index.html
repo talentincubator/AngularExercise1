@@ -1,0 +1,23 @@
+<html ng-app>
+<head>
+	<title>Demo</title>
+	<script type="text/javascript" src="js/lib/angular.min.js"></script>
+	<script type="text/javascript" src="js/controllers/app.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
+</head>
+<body>
+	<div class="container" ng-controller="AppCtrl">
+		<h1>Spyros Angular</h1>
+		<div class="pull-left span6">
+		<ul ng-repeat="user in users">
+			<a href="" ng-click="setUser(user.name)"><li>{{user.name | uppercase}} - {{user.city}}</li></a>
+		</ul>
+
+		</div>
+		<ng-include class="span5" src="details"></ng-include>
+		<ng-include class="span5" src="edit"></ng-include>
+
+	</div>
+</body>
+</html>
